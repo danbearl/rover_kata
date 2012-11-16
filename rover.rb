@@ -59,6 +59,9 @@ class Grid
   end
 end
 
+# randomizing the numeric arguments (within a limit) would be awesome
+# being able to 'quit'
+
 grid = Grid.new(rows: 5,
                 columns: 5,
                 obstacles: [
@@ -67,4 +70,9 @@ grid = Grid.new(rows: 5,
                   Coordinate.new(4,3)
                 ]
                )
-print grid.draw
+input = ""
+
+until input == "quit"
+  print grid.draw
+  input = gets.chomp
+end
